@@ -47,3 +47,5 @@ generateBtn.addEventListener("click", writePassword);
               // open a window that prints the password string
             //}    
         //}
+
+        // See this for generating random password: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript

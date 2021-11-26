@@ -1,16 +1,27 @@
 // Assignment code here
+var charLength = null;
+
+var generatePassword = function() {
+  charLength = prompt("How many characters would you like your password to contain? (8-128)");
+  if (charLength < 8 || charLength > 128 || isNaN(charLength)) {
+    alert("Please choose a number betwee 8 and 128.");
+  } 
+  console.log("charLength is " + charLength);
+  // WORK ON FEATURE BRANCH NEXT TIME!!!
+  // Next: it needs to keep prompting until it gets a numver between 8 and 128 --> see gladiators 
+
+}
 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword() {
-    var charLength = prompt("How many characters would you like your password to contain? (8-128)");
-    console.log(charLength);
-  };
+var writePassword = function() {
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
+
+  console.log("password is " + password);
 
   passwordText.value = password;
     // This seems to be saying that the value of the element will be the value of the password

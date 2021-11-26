@@ -6,17 +6,38 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword() {
+    var charLength = prompt("How many characters would you like your password to contain? (8-128)");
+    console.log(charLength);
+  };
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+    // This seems to be saying that the value of the element will be the value of the password
 
 }
 
 // Add event listener to generate button
+// When the generate button 'hears' a click, it will run the writePassword function
 generateBtn.addEventListener("click", writePassword);
 
+// ----------
 
+// So here's what I understand the original code trying to do:
+// 1. select the 'generate password' button element and store it as a variable --> that way we can listen for its getting clicked and perform a function (namely, generate produce password) later
+// 2. declare the function that will be called when a click happens later
+//      a. what will the function(s) do?
+          // i. a whole bunch of steps that will produce a password to be stored as variable 'password'. Let's break this down:
+              // (1) Deliver various prompts to the user and store each as its own variable:
+
+
+          // ii. more steps that will present the value of the 'password' variable (namely, the password generated) as text in the '#password' textarea element
+
+
+
+
+
+// ---------
 // ..........
 
 // Listen for CLICK of 'Generate Password' button

@@ -2,11 +2,45 @@
 var charLength = null;
 
 var generatePassword = function() {
+  var uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowers = uppers.toLowerCase();
+  var numbers = "1234567890";
+  var specials = "~!@#$%^&*()_+-=[]{}|;:.,?><"
+  console.log(uppers, lowers, numbers, specials);
+
   charLength = prompt("How many characters would you like your password to contain? (8-128)");
   if (charLength < 8 || charLength > 128 || isNaN(charLength)) {
-    alert("Please choose a number betwee 8 and 128.");
+    alert("Please choose a number between 8 and 128.");
   } 
   console.log("charLength is " + charLength);
+
+  var confirmUppers = confirm("Click OK to include uppercase characters.");
+  var confirmLowers = confirm("Click OK to include lowercase letters.");
+  var confirmNumbers = confirm("Click OK to include numeric characters.");
+  var confirmSpecials = confirm("Click OK to include special characters.");
+
+  console.log(charLength, confirmUppers, confirmLowers, confirmNumbers, confirmSpecials);
+
+  var passwordPool = null;
+
+  if (confirmUppers) {
+    passwordPool =  uppers;
+  }
+  if (confirmLowers) {
+    passwordPool = passwordPool + lowers;
+  }
+  if (confirmNumbers) {
+    passwordPool = passwordPool + numbers;
+  }
+  if (confirmSpecials) {
+    passwordPool = passwordPool + specials;
+  }
+  console.log(passwordPool);
+  
+  console.log(math.random()*passwordPool.length);
+
+  passwordPool.charAt()
+
   // WORK ON FEATURE BRANCH NEXT TIME!!!
   // Next: it needs to keep prompting until it gets a numver between 8 and 128 --> see gladiators 
 
@@ -39,12 +73,20 @@ generateBtn.addEventListener("click", writePassword);
 // 2. declare the function that will be called when a click happens later
 //      a. what will the function(s) do?
           // i. a whole bunch of steps that will produce a password to be stored as variable 'password'. Let's break this down:
-              // (1) Deliver various prompts to the user and store each as its own variable:
+              // (1) Deliver various prompts to the user and store each as its own variable: 
+                // a) character length
+                // b) whether to include:
+                  // i. uppercase
+                  // ii. lowercase
+                  // iii. numbers
+                  // iv. special characters
+              // (2)  
 
 
           // ii. more steps that will present the value of the 'password' variable (namely, the password generated) as text in the '#password' textarea element
 
 
+// speacial characters for reference: ~!@#$%^&*()_+-=[]{}|;:.,?><
 
 
 

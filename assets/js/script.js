@@ -1,5 +1,5 @@
 // Assignment code here
-var charLength = null;
+
 
 var generatePassword = function() {
   var uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -7,20 +7,32 @@ var generatePassword = function() {
   var numbers = "1234567890";
   var specials = "~!@#$%^&*()_+-=[]{}|;:.,?><"
 
-  charLength = prompt("How many characters would you like your password to contain? (8-128)");
-  if (charLength < 8 || charLength > 128 || isNaN(charLength)) {
+  var charLength = prompt("How many characters would you like your password to contain? (8-128)");
+  while (charLength < 8 || charLength > 128 || isNaN(charLength)) {
     alert("Please choose a number between 8 and 128.");
+    charLength = prompt("How many characters would you like your password to contain? (8-20)");
   } 
+  var confirmCriteria = function() {
+    var confirmUppers = confirm("Click OK to include uppercase characters.");
+    var confirmLowers = confirm("Click OK to include lowercase letters.");
+    var confirmNumbers = confirm("Click OK to include numeric characters.");
+    var confirmSpecials = confirm("Click OK to include special characters.");
+    console.log("passwordPool = " + passwordPool);
+  }
 
-  var confirmUppers = confirm("Click OK to include uppercase characters.");
-  var confirmLowers = confirm("Click OK to include lowercase letters.");
-  var confirmNumbers = confirm("Click OK to include numeric characters.");
-  var confirmSpecials = confirm("Click OK to include special characters.");
+  confirmCriteria();
 
-  var passwordPool = null;
+  while (passwordPool == undefined) {
+    alert("Please choose at least one character type (uppercase, lowercase, numeric, special) in order to generate a password.");
+    confirmCriteria();
+  }
+
+  
+
+  var passwordPool;
 
   if (confirmUppers) {
-    passwordPool =  uppers;
+    passwordPool =  passwordPool + uppers;
   }
   if (confirmLowers) {
     passwordPool = passwordPool + lowers;
@@ -43,9 +55,6 @@ var generatePassword = function() {
   return password1;
 
   console.log(password1 + "(final password)");
-
-  // Next: it needs to keep prompting until it gets a numver between 8 and 128 --> see gladiators 
-
 }
 
 
@@ -70,6 +79,10 @@ function writePassword() {
 // When the generate button 'hears' a click, it will run the writePassword function
 generateBtn.addEventListener("click", writePassword);
 
+// ----------
+// Still to do:
+  // - figure out how prompt again if they didn't choose any characters...
+  // - look at how other people did it?
 // ----------
 
 // So here's what I understand the original code trying to do:

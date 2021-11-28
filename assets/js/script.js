@@ -33,14 +33,16 @@ var generatePassword = function() {
   }
   console.log(passwordPool);
   
-  var password1 = passwordPool.charAt(Math.floor(Math.random()*passwordPool.length));
+  password1 = passwordPool.charAt(Math.floor(Math.random()*passwordPool.length));
+  console.log(password1 + "(1st character)");
 
   for (i = 1; i < charLength; i++) {
-    var password1 = password1 + passwordPool.charAt(Math.floor(Math.random()*passwordPool.length));
-    return;
+    password1 = password1 + passwordPool.charAt(Math.floor(Math.random()*passwordPool.length));
   }
 
-  console.log(password1);
+  return password1;
+
+  console.log(password1 + "(final password)");
 
   // Next: it needs to keep prompting until it gets a numver between 8 and 128 --> see gladiators 
 
@@ -51,9 +53,11 @@ var generatePassword = function() {
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-var writePassword = function() {
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  passwordText.textContent = password;
+  console.log("password text is " + passwordText);
 
   console.log("password is " + password);
 

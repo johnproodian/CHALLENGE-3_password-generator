@@ -6,20 +6,16 @@ var generatePassword = function() {
   var lowers = uppers.toLowerCase();
   var numbers = "1234567890";
   var specials = "~!@#$%^&*()_+-=[]{}|;:.,?><"
-  console.log(uppers, lowers, numbers, specials);
 
   charLength = prompt("How many characters would you like your password to contain? (8-128)");
   if (charLength < 8 || charLength > 128 || isNaN(charLength)) {
     alert("Please choose a number between 8 and 128.");
   } 
-  console.log("charLength is " + charLength);
 
   var confirmUppers = confirm("Click OK to include uppercase characters.");
   var confirmLowers = confirm("Click OK to include lowercase letters.");
   var confirmNumbers = confirm("Click OK to include numeric characters.");
   var confirmSpecials = confirm("Click OK to include special characters.");
-
-  console.log(charLength, confirmUppers, confirmLowers, confirmNumbers, confirmSpecials);
 
   var passwordPool = null;
 
@@ -37,11 +33,15 @@ var generatePassword = function() {
   }
   console.log(passwordPool);
   
-  console.log(math.random()*passwordPool.length);
+  var password1 = passwordPool.charAt(Math.floor(Math.random()*passwordPool.length));
 
-  passwordPool.charAt()
+  for (i = 1; i < charLength; i++) {
+    var password1 = password1 + passwordPool.charAt(Math.floor(Math.random()*passwordPool.length));
+    return;
+  }
 
-  // WORK ON FEATURE BRANCH NEXT TIME!!!
+  console.log(password1);
+
   // Next: it needs to keep prompting until it gets a numver between 8 and 128 --> see gladiators 
 
 }

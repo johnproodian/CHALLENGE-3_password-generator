@@ -86,9 +86,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-<<<<<<< HEAD
-generateBtn.addEventListener("click", writePassword);
-=======
 // When the generate button 'hears' a click, it will run the writePassword function
 generateBtn.addEventListener("click", writePassword);
->>>>>>> develop

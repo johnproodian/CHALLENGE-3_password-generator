@@ -9,6 +9,10 @@ Specifically, the app needed to:
 * generate a random password that matched the selection criteria
 * display the password on the page
 
+## Screenshot
+
+
+
 ## Built With
 * HTML
 * CSS

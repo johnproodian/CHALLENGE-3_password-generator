@@ -20,3 +20,10 @@ Specifically, the app needed to:
 
 ## Website
 https://johnproodian.github.io/password-generator-challenge/
+
+## (Recently Learned) Skills Used
+* Creating and using variables of different data types (to create the password)
+* Writing conditional statements (to add password criteria that user has selected)
+* Writing FOR loops (to create a password from the created variables)
+* Using functions (to display the password)
+* Deploying the page to the web with GitHub pages

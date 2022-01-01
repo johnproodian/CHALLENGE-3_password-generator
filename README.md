@@ -26,4 +26,4 @@ https://johnproodian.github.io/password-generator-challenge/
 * Writing conditional statements (to add password criteria that user has selected)
 * Writing FOR loops (to create a password from the created variables)
 * Using functions (to display the password)
-* Deploying the page to the web with GitHub pages
+* Using GitHub pages to deploy the page to the web

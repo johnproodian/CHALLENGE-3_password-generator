@@ -1,6 +1,5 @@
 # Password Generator Challenge
 
-## Purpose
 The purpose of this challenge was to create an application that an employee could use to generate a random password based on criteria they selected. 
 
 Specifically, the app needed to:

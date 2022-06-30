@@ -1,4 +1,4 @@
-# Password Generator Challenge
+# Password Generator
 
 The purpose of this challenge was to create an application that an employee could use to generate a random password based on criteria they selected. 
 
@@ -18,7 +18,7 @@ Specifically, the app needed to:
 * JavaScript (my contribution)
 
 ## Website
-https://johnproodian.github.io/password-generator-challenge/
+https://johnproodian.github.io/password-generator/
 
 ## (Recently Learned) Skills Used
 * Creating and using variables of different data types (to create the password)
